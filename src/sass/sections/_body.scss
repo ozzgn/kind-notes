@@ -1,0 +1,209 @@
+body,html {
+    height: 100%;
+    margin:0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+body {
+    background-color: $glacier;
+
+    .notes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 66%;
+        position: absolute;
+        top: 72px;
+        overflow-y: auto;
+        width: 100%;
+
+        .card {
+            overflow-wrap: break-word;
+            width: 270px;
+            height: 200px;
+            margin: 1rem;
+            padding: 1rem;
+            background-color: lightskyblue;
+            color: $glacier;
+
+            .color-select-container {
+                display: none;
+                position: relative;
+            }
+            
+            .icon-container {
+                width: 90%;
+                display: flex;
+                justify-content: space-around;
+                font-size: 1.5rem;
+                position: absolute;
+                bottom: 1rem;
+
+                .fa, .fas {
+                    cursor: pointer;
+                }
+            }
+
+            &--color {
+                display: flex;
+                justify-content: space-between;
+
+                .fa {
+                    font-size: 2rem;
+                    position: relative;
+                    top: -7px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    color: $purpleOpaque;
+                }
+                
+                input, label {
+                    cursor: pointer;
+                }
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                input[type="radio"] + label:before {
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    padding: 3px;
+                    margin-right: 5px;
+                    background-clip: content-box;
+                    border-radius: 50%;
+                }
+                
+                input[type="radio"]:checked + label:before {
+                    background-color: $purple;
+                    border: 2px dotted $purple;
+                }
+
+                *,
+                *:before,
+                *:after {
+                    box-sizing: border-box;
+                }
+                
+                .sound-signal label {
+                    display: inline-flex;
+                    align-items: center;
+                }
+
+                .radio {
+                    &--aqua + label:before {
+                        background-color: $aquaLight;
+                    }
+
+                    &--blue + label:before {
+                        background-color: $blueLight;
+                    }
+
+                    &--green + label:before {
+                        background-color: $greenLight;
+                    }
+
+                    &--yellow + label:before {
+                        background-color: $yellowLight;
+                    }
+
+                    &--pink + label:before {
+                        background-color: $pinkLight;
+                    }
+
+                    &--purple + label:before {
+                        background-color: $purpleLight;
+                    }
+
+                    &--orange + label:before {
+                        background-color: $orangeLight;
+                    }
+
+                    &--glacier + label:before {
+                        background-color: $glacier;
+                    }
+
+                    &--dark + label:before {
+                        background-color: $black;
+                    }
+                }
+            }    
+        }
+
+        .background {
+            &--aqua {
+                background-color: $aquaLight;
+                border: 2px solid $aquaOpaque;
+            }
+
+            &--blue {
+                background-color: $blueLight;
+                border: 2px solid $blueOpaque;
+            }
+
+            &--green {
+                background-color: $greenLight;
+                border: 2px solid $greenOpaque;
+            }
+
+            &--yellow {
+                background-color: $yellowLight;
+                border: 2px solid $yellowOpaque;
+                color: $black;
+            }
+
+            &--pink {
+                background-color: $pinkLight;
+                border: 2px solid $pinkOpaque;
+            }
+
+            &--purple {
+                background-color: $purpleLight;
+                border: 2px solid $purpleOpaque;
+            }
+
+            &--orange {
+                background-color: $orangeLight;
+                border: 2px solid $orangeOpaque;
+                color: $black;
+            }
+
+            &--glacier {
+                background-color: $glacier;
+                border: 1px solid $black;
+                color: $black;
+            }
+
+            &--dark {
+                background-color: $black;
+            }
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: $purpleOpaqueLight; 
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $purple; 
+            cursor: pointer;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: $purpleOpaque; 
+        }
+    }
+}
+
+button {
+ cursor: pointer;
+}

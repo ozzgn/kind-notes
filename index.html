@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Ozzy Gonzalez Kind Notes">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Ozzy Gonzalez - Kind notes app</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  
+  <header>
+    <div class="search-nav">
+      <div class="container">
+        <h1>Kind Notes</h1>
+        <div id="loader" class="loader">
+          <div class="loader__container">
+            <i class="fa fa-spinner fa-spin"></i>
+          </div>
+        </div>
+        <div class="search-nav__remove">
+          <button class="clearButton btn btn-primary">Remove all notes</button>
+        </div>
+        <div class="search">
+          <div class="search__input-container">
+            <form>
+              <input id="search" type="search" placeholder="Search Notes" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <div id="noMatches"></div>
+    <div id="notes" class="notes note-card-scroll"></div>
+    <div class="note-card">
+      <div class="note-card__container"></div>
+    </div>
+  </body>
+
+  <footer>
+    <div class="controls">
+      <div class="container">
+        <h2>Write a kind note to yourself</h2>
+        <div class="controls__input">
+          <textarea id="insertNote" class="form-control" aria-label="With textarea" maxlength="400"></textarea>
+        </div>
+        <div class="controls__add">
+          <button id="addButton" class="btn btn-primary">Add Note</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

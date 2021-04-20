@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+/* Font Family */
+$serif: sans-serif;
+
+h1 {
+    font-family: $serif;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    margin: 0;
+    width: auto;
+    text-align: left;
+    color: $glacier;
+    position: absolute;
+
+    @include lg {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    @include sm {
+        display: none;
+    }
+}
+
+h6 {
+    margin: 0;
+}
+
+p {
+    font-size: .8rem;
+}
